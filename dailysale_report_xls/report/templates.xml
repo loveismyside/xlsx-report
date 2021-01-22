@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <report id="dailysale_xls_report"
+          model="dailysale.xls.wizard"
+          string="Daily Sale Report XLS"
+          report_type="xlsx"
+          name="dailysale_report_xls.dailysale_xls_report_template"
+          file="dailysale_report_xls_wizard"
+          attachment_use="false"/>
+</odoo>

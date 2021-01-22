@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+  <record id="dailysale_xls_report_form_view" model="ir.ui.view">
+    <field name="name">Daily Sale XLS Report Wizard Form</field>
+    <field name="model">dailysale.xls.wizard</field>
+    <field name="arch" type="xml">
+      <form string="DailySale XLS Report">
+        <group>
+          <group>
+             <field name="date_start"/>
+          </group>
+          <group>
+            <field name="date_end"/>
+          </group>
+        </group>
+        <footer>
+          <button name="action_create_report"
+                  string="XLS Report"
+                  type="object"
+                  class="oe_highlight"/>
+          <button string="Cancel"
+                  class="btn btn-default"
+                  special="cancel"/>
+        </footer>
+      </form>
+    </field>
+  </record>
+
+  <record id="action_sale_xls_report_wizard" model="ir.actions.act_window">
+    <field name="name">Daily Sales XLS Report</field>
+    <field name="res_model">dailysale.xls.wizard</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">form</field>
+    <field name="target">new</field>
+  </record>
+
+  <menuitem id="menu_dailysale_xls_report_wizard"
+            name="Daily Sale XLS"
+            action="action_sale_xls_report_wizard"
+            parent="sale.menu_sale_report"
+            sequence="1"/>
+</odoo>
